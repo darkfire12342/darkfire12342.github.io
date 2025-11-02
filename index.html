@@ -6,7 +6,7 @@
     <title>Auralis - Discord Müzik Botu</title>
     <meta name="description" content="Auralis - Gelişmiş Discord müzik botu. Hızlı, kaliteli ve 7/24 aktif!" />
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Great+Vibes&display=swap');
 
       body {
         margin: 0;
@@ -30,6 +30,19 @@
         box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
         backdrop-filter: blur(10px);
         animation: fadeIn 1.5s ease;
+        position: relative;
+      }
+
+      .author {
+        position: absolute;
+        top: -50px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-family: 'Great Vibes', cursive;
+        font-size: 2rem;
+        color: #ffffffcc;
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+        letter-spacing: 1px;
       }
 
       h1 {
@@ -78,11 +91,13 @@
         h1 { font-size: 2.2rem; }
         p { font-size: 1rem; }
         .buttons a { padding: 10px 20px; font-size: 0.9rem; }
+        .author { font-size: 1.6rem; top: -40px; }
       }
     </style>
   </head>
   <body>
     <div class="container">
+      <div class="author">By. RedSimle</div>
       <h1>🎵 Auralis</h1>
       <p>Müzik dinlemeyi sevenler için tasarlandı. 7/24 aktif ve kaliteli ses deneyimi!</p>
       <div class="buttons">
@@ -93,4 +108,3 @@
     <footer>© 2025 Auralis — Tüm hakları saklıdır.</footer>
   </body>
 </html>
-
