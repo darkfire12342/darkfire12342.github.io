@@ -1,1 +1,96 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Auralis - Discord Müzik Botu</title>
+    <meta name="description" content="Auralis - Gelişmiş Discord müzik botu. Hızlı, kaliteli ve 7/24 aktif!" />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+      body {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(135deg, #007bff, #ffffff);
+        background-attachment: fixed;
+        color: #fff;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        overflow: hidden;
+      }
+
+      .container {
+        background: rgba(0, 0, 0, 0.4);
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(10px);
+        animation: fadeIn 1.5s ease;
+      }
+
+      h1 {
+        font-size: 3rem;
+        margin-bottom: 10px;
+        font-weight: 600;
+      }
+
+      p {
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+      }
+
+      .buttons a {
+        display: inline-block;
+        margin: 10px;
+        padding: 12px 30px;
+        font-size: 1rem;
+        font-weight: 600;
+        color: #fff;
+        background: rgba(255, 255, 255, 0.15);
+        border: 2px solid #fff;
+        border-radius: 10px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+
+      .buttons a:hover {
+        background: #fff;
+        color: #007bff;
+      }
+
+      footer {
+        position: absolute;
+        bottom: 15px;
+        font-size: 0.9rem;
+        opacity: 0.7;
+      }
+
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+
+      @media (max-width: 600px) {
+        h1 { font-size: 2.2rem; }
+        p { font-size: 1rem; }
+        .buttons a { padding: 10px 20px; font-size: 0.9rem; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>🎵 Auralis</h1>
+      <p>Müzik dinlemeyi sevenler için tasarlandı. 7/24 aktif ve kaliteli ses deneyimi!</p>
+      <div class="buttons">
+        <a href="https://discord.com/oauth2/authorize?client_id=1432776395754307755&permissions=2150697984&integration_type=0&scope=bot+applications.commands">📩 Davet Et</a>
+        <a href="https://discord.gg/ZZm3BpMP6E">💬 Destek Sunucusu</a>
+      </div>
+    </div>
+    <footer>© 2025 Auralis — Tüm hakları saklıdır.</footer>
+  </body>
+</html>
 
