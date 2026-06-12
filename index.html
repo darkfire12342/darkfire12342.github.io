@@ -1,110 +1,117 @@
 <!DOCTYPE html>
 <html lang="tr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Auralis - Discord Müzik Botu</title>
-    <meta name="description" content="Auralis - Gelişmiş Discord müzik botu. Hızlı, kaliteli ve 7/24 aktif!" />
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Great+Vibes&display=swap');
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Senin İçin ❤️</title>
 
-      body {
-        margin: 0;
-        font-family: 'Poppins', sans-serif;
-        background: linear-gradient(135deg, #007bff, #ffffff);
-        background-attachment: fixed;
-        color: #fff;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-        overflow: hidden;
-      }
+<style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        font-family:Arial, sans-serif;
+    }
 
-      .container {
-        background: rgba(0, 0, 0, 0.4);
-        padding: 40px;
-        border-radius: 20px;
-        box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
-        backdrop-filter: blur(10px);
-        animation: fadeIn 1.5s ease;
-        position: relative;
-      }
+    body{
+        height:100vh;
+        background:linear-gradient(135deg,#ff9a9e,#fad0c4);
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        overflow:hidden;
+    }
 
-      .author {
-        position: absolute;
-        top: -50px;
-        left: 50%;
-        transform: translateX(-50%);
-        font-family: 'Great Vibes', cursive;
-        font-size: 2rem;
-        color: #ffffffcc;
-        text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
-        letter-spacing: 1px;
-      }
+    .card{
+        background:white;
+        padding:40px;
+        border-radius:25px;
+        text-align:center;
+        max-width:500px;
+        box-shadow:0 10px 30px rgba(0,0,0,0.2);
+    }
 
-      h1 {
-        font-size: 3rem;
-        margin-bottom: 10px;
-        font-weight: 600;
-      }
+    h1{
+        color:#ff4d6d;
+        margin-bottom:15px;
+    }
 
-      p {
-        font-size: 1.2rem;
-        margin-bottom: 30px;
-      }
+    p{
+        color:#444;
+        line-height:1.7;
+        margin-bottom:20px;
+    }
 
-      .buttons a {
-        display: inline-block;
-        margin: 10px;
-        padding: 12px 30px;
-        font-size: 1rem;
-        font-weight: 600;
-        color: #fff;
-        background: rgba(255, 255, 255, 0.15);
-        border: 2px solid #fff;
-        border-radius: 10px;
-        text-decoration: none;
-        transition: all 0.3s ease;
-      }
+    button{
+        background:#ff4d6d;
+        color:white;
+        border:none;
+        padding:12px 25px;
+        border-radius:50px;
+        cursor:pointer;
+        font-size:16px;
+    }
 
-      .buttons a:hover {
-        background: #fff;
-        color: #007bff;
-      }
+    button:hover{
+        transform:scale(1.05);
+    }
 
-      footer {
-        position: absolute;
-        bottom: 15px;
-        font-size: 0.9rem;
-        opacity: 0.7;
-      }
+    #message{
+        margin-top:20px;
+        color:#ff4d6d;
+        font-weight:bold;
+        font-size:18px;
+    }
 
-      @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(20px); }
-        to { opacity: 1; transform: translateY(0); }
-      }
+    .heart{
+        position:absolute;
+        color:white;
+        font-size:20px;
+        animation:fall 6s linear infinite;
+    }
 
-      @media (max-width: 600px) {
-        h1 { font-size: 2.2rem; }
-        p { font-size: 1rem; }
-        .buttons a { padding: 10px 20px; font-size: 0.9rem; }
-        .author { font-size: 1.6rem; top: -40px; }
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <div class="author">By. RedSimle</div>
-      <h1>🎵 Auralis</h1>
-      <p>Müzik dinlemeyi sevenler için tasarlandı. 7/24 aktif ve kaliteli ses deneyimi!</p>
-      <div class="buttons">
-        <a href="https://discord.com/oauth2/authorize?client_id=1432776395754307755&permissions=2150697984&integration_type=0&scope=bot+applications.commands">📩 Davet Et</a>
-        <a href="https://discord.gg/ZZm3BpMP6E">💬 Destek Sunucusu</a>
-      </div>
-    </div>
-    <footer>© 2025 Auralis — Tüm hakları saklıdır.</footer>
-  </body>
+    @keyframes fall{
+        from{
+            transform:translateY(-100px);
+        }
+        to{
+            transform:translateY(110vh);
+        }
+    }
+</style>
+</head>
+<body>
+
+<div class="card">
+    <h1>❤️ Sana Bir Mesajım Var ❤️</h1>
+
+    <p>
+        Hayatıma renk kattığın için teşekkür ederim.
+        Gülüşün en kötü günleri bile güzelleştiriyor.
+        İyi ki varsın. 🌹
+    </p>
+
+    <button onclick="showMessage()">Tıkla ✨</button>
+
+    <div id="message"></div>
+</div>
+
+<script>
+function showMessage(){
+    document.getElementById("message").innerHTML =
+    "Seni çok seviyorum ❤️";
+}
+
+for(let i=0;i<30;i++){
+    const heart=document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML="❤";
+    heart.style.left=Math.random()*100+"vw";
+    heart.style.animationDuration=(Math.random()*4+3)+"s";
+    heart.style.opacity=Math.random();
+    document.body.appendChild(heart);
+}
+</script>
+
+</body>
 </html>
